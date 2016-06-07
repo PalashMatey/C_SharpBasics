@@ -39,6 +39,10 @@ namespace Edx_Week1
             Console.WriteLine(ZipCode);
             Console.WriteLine(Country);
 
+            Console.WriteLine("Enter the country: ");
+            Country = Console.ReadLine();
+
+            Console.WriteLine(Country);
             Console.Write("Press any key to continue...");
             Console.ReadKey();
 
