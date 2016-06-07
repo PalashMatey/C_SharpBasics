@@ -9,9 +9,7 @@ namespace Edx_Week3
 {
     class CompleteInformation
     {
-        private static string firstname;
-        private static string lastname;
-        private static string birthday;
+       
 
         static void Main(string[] args)
         {
@@ -19,6 +17,9 @@ namespace Edx_Week3
             string firstname = "";
             string lastname = "";
             string birthday = "";
+            string teacherfirstname;
+            string teacherlastname;
+            string teachercourse;
             Console.WriteLine("1. Enter Student Information");
             Console.WriteLine("2. Enter Teacher Information");
             Console.WriteLine("3. Print Student Details");
@@ -30,9 +31,15 @@ namespace Edx_Week3
             {
                 case 1:
                     Console.WriteLine("Enter Student Information");
-                    GetStudentInformation();
+                    GetStudentInformation(out firstname,out lastname,out birthday);
                     PrintStudentDetails(firstname,lastname,birthday);
                     Console.ReadKey();
+                    break;
+                case 2:
+                    Console.WriteLine("Enter Teacher Information");
+                    GetTeacherInformation(out teacherfirstname, out teacherlastname, out teachercourse);
+                    PrintTeacherInformation(teacherfirstname, teacherlastname, teachercourse);
+                    Console.Read();
                     break;
                 case 3:
                     Console.WriteLine("Printing Student Details");
@@ -40,29 +47,45 @@ namespace Edx_Week3
                     break;
                 default:
                     Console.WriteLine("Invalid Input");
+                    Console.ReadKey();
+                   
                     break;
             }
 
         }
 
-        static void GetStudentInformation()
+        static void GetStudentInformation(out string name1,out string name2,out string name3)
             {
                 Console.WriteLine("Enter the Students first name");
-                firstname = Console.ReadLine();
+                name1 = Console.ReadLine();
                 Console.WriteLine("Enter the student lastname");
-                lastname = Console.ReadLine();
+                name2 = Console.ReadLine();
                 Console.WriteLine("Enter students birthday");
-                birthday = Console.ReadLine();
+                name3 = Console.ReadLine();
                 // implement DateTime.TryParse
 
             }
             static void PrintStudentDetails(string name12,string name2,string somedate)
             {
-                Console.WriteLine("The student name is {0} {1}", firstname, lastname);
+                Console.WriteLine("The student name is {0} {1}", name12, name2);
+                Console.WriteLine("The student was born on {0}",somedate);
             }
 
-        
-        
+        static void GetTeacherInformation(out string name1, out string name2, out string name3)
+        {
+            Console.WriteLine("Enter the Teacher's firstname");
+            name1 = Console.ReadLine();
+            Console.WriteLine("Enter the teachers lastname");
+            name2 = Console.ReadLine();
+            Console.WriteLine("Enter the course that the teacher teaches");
+            name3 = Console.ReadLine();
+        }
+
+        static void PrintTeacherInformation(string name1, string name2, string name3)
+        {
+            Console.WriteLine("The name of the teacher is {0} {1}",name1,name2);
+            Console.WriteLine("The teacher teaches the course : {0}",name3);
+        }
         //defining methods
        
 
