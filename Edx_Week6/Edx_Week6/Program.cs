@@ -12,6 +12,8 @@ Defining a method as virtual in the abstract class(base class) means that it can
 This means that the subclasses can either accept the inherited implementation or accept the implementation that is inherited.
 If a method is declared as abstract in an abstract class it must be implemented in the subclass, else it would throw a compiler error.
 Abstract method is not permitted to have any implementation, read earlier statement.
+Also you cannot instantiate an abstract class.
+// For an Interface class, we do not need to use the override keyword as there is no implementation in an interface class.
 */
 namespace Edx_Week6
 {

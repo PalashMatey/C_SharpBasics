@@ -24,7 +24,21 @@ namespace Edx_Week5
 
             int numOfStudents;
             Console.WriteLine("Enter the number of students to be added to a course");
-            numOfStudents = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                numOfStudents = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Please enter a valid value ");
+
+                
+            }
+            finally
+            {
+                numOfStudents = Convert.ToInt32(Console.ReadLine());
+            }
+            
             Student[] student = new Student[numOfStudents];
             int count = 0;
             for (int i = 0; i < student.Length; i++)
