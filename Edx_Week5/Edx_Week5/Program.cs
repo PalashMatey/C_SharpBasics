@@ -30,7 +30,7 @@ namespace Edx_Week5
             for (int i = 0; i < student.Length; i++)
             {
                 student[i] = new Student();
-                {
+                {   
                     Console.WriteLine("Enter the name and birthday of the student: {0}", i+1);
                     student[i].StudentName = Console.ReadLine();
                     student[i].Bday = Console.ReadLine();
@@ -75,6 +75,6 @@ namespace Edx_Week5
             Console.Write("Press any key to continue . . .");
             Console.ReadKey();
         }
-        
+          
     }
 }
