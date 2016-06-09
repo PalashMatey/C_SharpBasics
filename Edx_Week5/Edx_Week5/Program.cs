@@ -44,14 +44,32 @@ namespace Edx_Week5
             
             #endregion
             #region Teacher Definitions
-
+            Teacher teaching = new Teacher();
+            teaching.TeacherName = "Jinsey";
+            course.AddTeacher(teaching);
             #endregion
             #region Course definition
             
             course.Coursename = "Programming in C#";
             Console.WriteLine("The name of the course is: {0} with {1} students",course.Coursename,count);
 
-            
+
+            #endregion
+            Degree deg = new Degree();
+            deg.DegreeName = "Bachelor of Science";
+            deg.AddCourse(course);
+            Console.WriteLine("The name of the degree is {0} containing the course {1}",deg.DegreeName,deg.CourseTaken.Coursename);
+            UProgram prog = new UProgram();
+            prog.NameProgram = "Information Technology";
+            prog.AddDegree(deg);
+            Console.WriteLine("The name of the program is {0} and the degree obtained is {1}",prog.NameProgram,prog.Degr.DegreeName);
+            #region Displaying Stats
+            Console.WriteLine("Display/Accessing Student data inside Courses");
+            for (int i = 0; i < student.Length; i++)
+            {
+                Console.WriteLine(course.Students[i].StudentName);
+            }
+            Console.WriteLine("The name of the teacher is: {0}",course.Teach.TeacherName);
             #endregion
 
             Console.Write("Press any key to continue . . .");
