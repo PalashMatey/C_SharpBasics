@@ -8,9 +8,29 @@ namespace Edx_Week5
 {
     class Student
     {
-        public string StudentName { get; set; }
-        public string Birthdate { get; set; }
+        private string studentname;
+        private string birthday;
 
-        
+        public string StudentName
+        {
+            get { return studentname; }
+            set { studentname = value; }
+        }
+
+        public string Bday
+        {
+            get { return birthday; }
+            set { birthday = value; }
+        }
+
+        public Student(string name, string bday)
+        {
+            this.StudentName = name;
+            this.Bday = bday;
+        }
+
+        public Student()
+        {
+        }
     }
 }

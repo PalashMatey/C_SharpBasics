@@ -16,8 +16,22 @@ namespace Edx_Week5
     {
         static void Main(string[] args)
         {
-            #region Nothing important
-
+            #region Student Definitions
+            Student[] student = new Student[3];
+            for (int i = 0; i < student.Length; i++)
+            {
+                student[i] = new Student();
+                {
+                    Console.WriteLine("Enter the name and birthday of the student: {0}", i+1);
+                    student[i].StudentName = Console.ReadLine();
+                    student[i].Bday = Console.ReadLine();
+                }
+            }
+            student[0].StudentName = "Palash";
+            student[0].Bday = "06-06-1992";
+            Console.WriteLine("{0}   {1}",student[0].StudentName,student[0].Bday);
+            Console.Write("Press any key to continue . . .");
+            Console.ReadKey();
             #endregion
         }
     }
