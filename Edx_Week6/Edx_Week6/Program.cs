@@ -21,7 +21,9 @@ namespace Edx_Week6
     {
         static void Main(string[] args)
         {
-
+            Student s = new Student();
+            s.PersonName = "Palash";
+            s.Birthday = "06-06-1992";
         }
     }
 }
