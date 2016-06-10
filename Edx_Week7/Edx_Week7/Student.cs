@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +12,16 @@ namespace Edx_Week7
     {
         private string studentname;
         private string birthday;
+        Stack grade = new Stack();
 
+        public Stack Grade
+        {
+            get
+            {
+                return grade;
+            }
+            set { grade = value; }
+        }
         public string StudentName
         {
             get
@@ -36,6 +47,12 @@ namespace Edx_Week7
         public Student()
         {
             
+        }
+
+        public void AddGrade(string grad)
+        {
+            Grade.Push(grad);
+            Console.WriteLine("Adding a grade to the Student {0}",this.StudentName);
         }
 
     }

@@ -29,7 +29,9 @@ namespace Edx_Week7
             int numOfStudents;
             Console.WriteLine("Enter the number of students to be added to a course");
             numOfStudents = Convert.ToInt32(Console.ReadLine());
-
+            Console.WriteLine("Enter the number of grades you would like to enter for each student :");
+            int numGrades = Convert.ToInt32(Console.ReadLine());
+            string fgrade;
             Student student = new Student();
             int count = 0;
             for (int i = 0; i < numOfStudents; i++)
@@ -40,9 +42,17 @@ namespace Edx_Week7
                     student.StudentName = Console.ReadLine();
                     student.Birthday = Console.ReadLine();
                     c.AddStudent(student);
+                    for (int j = 0; j < numGrades; j++)
+                    {
+                        Console.WriteLine("Enter the grades for {0} subject", j + 1);
+                        fgrade = Console.ReadLine();
+                        student.AddGrade(fgrade);
+                    }
 
                 }
             }
+
+            
             c.DisplayStuff();
             Console.WriteLine("Press any key to continue . . .");
             Console.ReadKey();
