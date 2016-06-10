@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Edx_Week7
 {
-    class Student
+    class Student : IComparable
     {
         private string studentname;
         private string birthday;
@@ -55,5 +55,10 @@ namespace Edx_Week7
             Console.WriteLine("Adding a grade to the Student {0}",this.StudentName);
         }
 
+        public int CompareTo(object obj1)
+        {
+           
+            throw new NotImplementedException();
+        }
     }
 }

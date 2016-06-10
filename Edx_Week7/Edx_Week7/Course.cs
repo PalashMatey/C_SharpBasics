@@ -50,7 +50,7 @@ namespace Edx_Week7
         {
             foreach (Student stude in students)
             {
-                Console.WriteLine("Student name {0} and Birthday {1} with Grades {2}", stude.StudentName,stude.Birthday,stude.Grade);
+                Console.WriteLine("Student name {0} and Birthday {1} with Grades {2}", stude.StudentName,stude.Birthday,stude.Grade.Count);
             }
         }
     }
