@@ -22,8 +22,30 @@ namespace Edx_Week7
     {
         static void Main(string[] args)
         {
+            Course c = new Course();
+            Student stud = new Student();
 
+            c.Coursename = "Electrical Engineering";
+            int numOfStudents;
+            Console.WriteLine("Enter the number of students to be added to a course");
+            numOfStudents = Convert.ToInt32(Console.ReadLine());
 
+            Student student = new Student();
+            int count = 0;
+            for (int i = 0; i < numOfStudents; i++)
+            {
+                student = new Student();
+                {
+                    Console.WriteLine("Enter the name and birthday of the student: {0}", i + 1);
+                    student.StudentName = Console.ReadLine();
+                    student.Birthday = Console.ReadLine();
+                    c.AddStudent(student);
+
+                }
+            }
+            c.DisplayStuff();
+            Console.WriteLine("Press any key to continue . . .");
+            Console.ReadKey();
         }
     }
 }
