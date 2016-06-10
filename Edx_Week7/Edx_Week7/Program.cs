@@ -11,7 +11,10 @@ using System.Threading.Tasks;
  * Add objects of any kind to an ArrayList collection.
  * Retrieving items from a collection must be done explicitly. 
  * Its best to use a foreach loop to iterate over the collection.
- * 
+ * Study the lambda method, seems important and present all over olo repositories
+ * Keeping the IComparer class in mind is important when trying to sort over arraylists
+ * of user defined datatypes such as classes. In this case we could examine the student class,
+ * Considering two students and sorting them on the basis of their age.
 */
 namespace Edx_Week7
 {
@@ -19,6 +22,8 @@ namespace Edx_Week7
     {
         static void Main(string[] args)
         {
+
+
         }
     }
 }
