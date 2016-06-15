@@ -18,7 +18,7 @@ namespace WebSocket_Test
     {
         static void Main(string[] args)
         {
-            string urlname = "pos1.olostaging.com";
+            string urlname = "www.pos1.olostaging.com";
 
 
             Uri uriResult;
@@ -74,6 +74,11 @@ namespace WebSocket_Test
                 
                 return Convert.ToString(ex);
             }
+        }
+
+        public static bool TCPClientCheckMethod()
+        {
+            return false;
         }
     }
 }
