@@ -18,14 +18,7 @@ namespace WebSocket_Test
     {
         static void Main(string[] args)
         {
-            string urlname = "www.pos1.olostaging.com";
-
-
-            Uri uriResult;
-            bool result = Uri.TryCreate(urlname, UriKind.Absolute, out uriResult)
-                          && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
-
-            Console.WriteLine(result);
+            
             var isConnected = CheckForConnection();
             Console.WriteLine("Checking to see if the connection is established using WebClient ");
             Console.WriteLine(isConnected);
@@ -76,9 +69,6 @@ namespace WebSocket_Test
             }
         }
 
-        public static bool TCPClientCheckMethod()
-        {
-            return false;
-        }
+       
     }
 }
